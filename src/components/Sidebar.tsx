@@ -15,7 +15,7 @@ const GET_LESSONS_QUERY = gql`
 interface GetLessonsQueryResponse {
   lessons: {
     id: string;
-    tittle: string;
+    title: string;
     slug: string;
     availableAt: string;
     lessonType: "live" | "class";
@@ -33,7 +33,7 @@ export function Sidebar() {
           return (
             <Lesson
               key={lesson.id}
-              title={lesson.tittle}
+              title={lesson.title}
               slug={lesson.slug}
               availableAt={new Date(lesson.availableAt)}
               type={lesson.lessonType}
